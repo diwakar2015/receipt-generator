@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>MathHelper.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">receipt-generator</a> &gt; <a href="index.source.html" class="el_package">com.salesapp.taxcalculations</a> &gt; <span class="el_source">MathHelper.java</span></div><h1>MathHelper.java</h1><pre class="source lang-java linenums">/**
+ * 
+ */
+package com.salesapp.taxcalculations;
+
+import java.text.DecimalFormat;
+
+/**
+ * The MathHelper class provides mathematical helper functions to use on double
+ * values.
+ * 
+ * @author diwakarc
+ */
+<span class="nc" id="L14">public class MathHelper {</span>
+
+	/** Rounds off a double value to the nearest 0.05 */
+	public static double roundOff(double value) {
+<span class="fc" id="L18">		double roundedValue = Math.ceil(value * 20) / 20;</span>
+<span class="fc" id="L19">		return roundedValue;</span>
+	}
+
+	/** Truncates a double value to two decimal places. */
+	public static double truncate(double value) {
+<span class="fc" id="L24">		String result = new DecimalFormat(&quot;0.00&quot;).format(value);</span>
+<span class="fc" id="L25">		return Double.parseDouble(result);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
